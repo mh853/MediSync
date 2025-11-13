@@ -77,7 +77,7 @@ export async function POST(request: Request) {
       .insert({
         name: hospitalName || `${fullName}의 병원`,
         business_number: tempBusinessNumber,
-      })
+      } as Database['public']['Tables']['hospitals']['Insert'])
       .select()
       .single()
 
