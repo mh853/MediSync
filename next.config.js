@@ -24,7 +24,8 @@ const nextConfig = {
 
   // 실험적 기능으로 성능 개선
   experimental: {
-    optimizeCss: true,
+    // optimizeCss는 critters 패키지가 필요하므로 제거
+    // optimizeCss: true,
     optimizePackageImports: [
       '@heroicons/react',
       '@supabase/supabase-js',
