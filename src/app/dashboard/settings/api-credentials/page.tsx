@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { ApiPlatform, MetaCredentials, KakaoCredentials, GoogleCredentials } from '@/types/database.types'
 
@@ -214,9 +215,9 @@ export default function ApiCredentialsPage() {
                 <li>앱 ID와 앱 시크릿 복사</li>
                 <li>리디렉션 URI 추가: <code className="bg-white px-2 py-1 rounded">https://yourdomain.com/auth/callback/meta</code></li>
               </ol>
-              <a href="/docs/AD_PLATFORM_SETUP.md#meta-ads-설정" target="_blank" className="text-blue-600 hover:underline text-sm mt-2 inline-block">
+              <Link href="/guides/meta-ads" target="_blank" className="text-blue-600 hover:underline text-sm mt-2 inline-block">
                 → 상세 설정 가이드 보기
-              </a>
+              </Link>
             </div>
 
             <div className="space-y-4">
@@ -303,9 +304,9 @@ export default function ApiCredentialsPage() {
                 <li>REST API 키와 JavaScript 키 복사</li>
                 <li>Redirect URI 추가: <code className="bg-white px-2 py-1 rounded">https://yourdomain.com/auth/callback/kakao</code></li>
               </ol>
-              <a href="/docs/AD_PLATFORM_SETUP.md#kakao-moment-설정" target="_blank" className="text-yellow-700 hover:underline text-sm mt-2 inline-block">
+              <Link href="/guides/kakao-moment" target="_blank" className="text-yellow-700 hover:underline text-sm mt-2 inline-block">
                 → 상세 설정 가이드 보기
-              </a>
+              </Link>
             </div>
 
             <div className="space-y-4">
@@ -393,9 +394,9 @@ export default function ApiCredentialsPage() {
                 <li>Developer Token 신청</li>
                 <li>리디렉션 URI 추가: <code className="bg-white px-2 py-1 rounded">https://yourdomain.com/auth/callback/google</code></li>
               </ol>
-              <a href="/docs/AD_PLATFORM_SETUP.md#google-ads-설정" target="_blank" className="text-red-700 hover:underline text-sm mt-2 inline-block">
+              <Link href="/guides/google-ads" target="_blank" className="text-red-700 hover:underline text-sm mt-2 inline-block">
                 → 상세 설정 가이드 보기
-              </a>
+              </Link>
             </div>
 
             <div className="space-y-4">
@@ -465,7 +466,7 @@ export default function ApiCredentialsPage() {
           <li>• API 인증 정보는 암호화되어 안전하게 저장됩니다.</li>
           <li>• 각 플랫폼의 개발자 콘솔에서 앱을 생성하고 API 키를 발급받아야 합니다.</li>
           <li>• 저장 후 광고 계정 연동 페이지에서 계정 연동을 진행할 수 있습니다.</li>
-          <li>• 문제가 발생하면 <a href="/docs/AD_PLATFORM_SETUP.md" className="underline">상세 가이드</a>를 참고하세요.</li>
+          <li>• 문제가 발생하면 각 플랫폼의 상세 가이드 (<Link href="/guides/meta-ads" className="underline">Meta</Link>, <Link href="/guides/kakao-moment" className="underline">Kakao</Link>, <Link href="/guides/google-ads" className="underline">Google</Link>)를 참고하세요.</li>
         </ul>
       </div>
     </div>
